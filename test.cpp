@@ -14,7 +14,7 @@ struct PasswordEntry {
 std::vector<PasswordEntry> passwords;
 const std::string FILENAME = "passwords.txt";
 
-// Simple XOR encryption (not secure - for demo only)
+
 std::string encrypt(const std::string& text) {
     std::string result = text;
     for (int i = 0; i < result.length(); i++) {
@@ -46,7 +46,7 @@ void savePasswords() {
 void loadPasswords() {
     std::ifstream file(FILENAME);
     if (!file.is_open()) {
-        return; // File doesn't exist yet
+        return;    // Ska file hala
     }
     
     std::string line;
